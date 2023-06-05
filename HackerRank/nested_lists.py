@@ -1,18 +1,24 @@
 if __name__ == '__main__':
-    records = []
-    scores = []
+    num = []
+    arr = []
     for _ in range(int(input())):
         name = input()
         score = float(input())
-        records += [[name, score]]
-        scores += [score]
-    scores.sort()
-    second_lowest = scores[0]
-    for score in scores:
-        if score > scores[0]:
-            second_lowest = score
+        arr.append([name, score])
+        num.append(score)
+        
+    num.sort()
+    second_mini =0
+    mini = num[0]
+    arr.sort()
+    
+    for i in num:
+        if i != mini:
+            second_min = i
             break
-    names_of_second_lowest = [record[0] for record in records if record[1] == second_lowest]
-    names_of_second_lowest.sort()
-    for name in names_of_second_lowest:
-        print(name)
+    
+    for i in arr:
+        if i[1] == second_min:
+
+            print(i[0])
+            
