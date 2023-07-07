@@ -1,23 +1,25 @@
-def solve(): 
+def solve():
     n = int(input())
-    a = list(map(int, input().split()))
-    a = [float("-inf")] + a + [float("inf")]
+    array = list(map(int, input().split()))
+    array = [float("-inf")] + array + [float("inf")]
 
-    start = end = 1
-    for i in range(n-1):
-        if a[i] > a[i+1]:
-            start = i
+    left = 1
+    right = 1
+    for i in range(n - 1):
+        if array[i] > array[i + 1]:
+            left = i
             break
     for i in range(n, 0, -1):
-        if a[i] < a[i-1]:
-            end = i
+        if array[i] < array[i - 1]:
+            right = i
             break
 
-    decreasing = a[start:end+1]
-    if (a[start] < a[end+1]) and (a[start-1] < a[end]) and sorted(decreasing) == decreasing[::-1]:
+    decreasing_subarray = array[left:right + 1]
+    if (array[left] < array[right + 1]) and (array[left - 1] < array[right]) and sorted(decreasing_subarray) == decreasing_subarray[::-1]:
         print("yes")
-        print(start, end)
-        return
-    print("no")
+        print(left, right)
+    else:
+        print("no")
+
 
 solve()
