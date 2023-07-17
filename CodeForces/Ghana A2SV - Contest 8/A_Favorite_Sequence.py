@@ -2,16 +2,18 @@ t = int(input())
 
 for _ in range(t):
     n = int(input())
-    polycarp = list(map(int, input().split()))
+    poly = list(map(int, input().split()))
 
-    left, right = 0, n - 1
+    # create two pointers
+    left_ptr = 0
+    right_ptr = n - 1
 
-    answer = []
-    while left <= right:
-        answer.append(polycarp[left])
-        if left == right:
+    solution = []
+    while left_ptr <= right_ptr:
+        solution.append(poly[left_ptr])
+        if left_ptr == right_ptr:
             break
-        answer.append(polycarp[right])
-        left += 1
-        right -= 1
-    print(*answer)
+        solution.append(poly[right_ptr])
+        left_ptr += 1
+        right_ptr -= 1
+    print(*solution)
