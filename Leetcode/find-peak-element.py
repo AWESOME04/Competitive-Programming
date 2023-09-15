@@ -1,8 +1,9 @@
 class Solution:
     def findPeakElement(self, nums: List[int]) -> int:
-        # O(N) SOlution
+        # O(N) Solution
         # return nums.index(max(nums))
 
+        # O(log N) Solution
         l, r = 0, len(nums) - 1
 
         while l <= r:
