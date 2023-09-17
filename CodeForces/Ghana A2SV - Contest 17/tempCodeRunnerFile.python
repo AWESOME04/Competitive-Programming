@@ -1,0 +1,5 @@
+a = "aaaaaa"
+
+a.removeprefix("a")
+
+print(a)
