@@ -4,7 +4,7 @@ class Solution:
 
         for asteroid in asteroids:
             while stack and asteroid < 0 and stack[-1] > 0:
-                # Collisio detected
+                # Collision detected
                 if abs(asteroid) > stack[-1]:
                     stack.pop()
                 elif abs(asteroid) == stack[-1]:
