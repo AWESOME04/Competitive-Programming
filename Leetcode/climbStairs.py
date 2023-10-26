@@ -1,19 +1,10 @@
 class Solution:
-        def climbStairs(self, n: int) -> int:
-            if n == 0:
-                return 0
-            if n == 1:
-                return 1
-            if n == 2:
-                return 2
+    def climbStairs(self, n: int) -> int:
+        n1 , n2 = 0, 1
 
-            n2 = 2
-            n3 = 3 
-
-            for i in range(n-3):
-                n3, n2 = n3+n2, n3
-
-            return n3
+        for i in range(n):            
+            n1, n2 = n2, n1+n2
+        return n2
         
 
         # Time Complexity: O(N)
