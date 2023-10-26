@@ -10,5 +10,5 @@ class Solution:
                 b = c
             return b
 
-        # Time Complexity: 
-        # Space Complexity: 
+        # Time Complexity: O(N)
+        # Space Complexity: O(1)
