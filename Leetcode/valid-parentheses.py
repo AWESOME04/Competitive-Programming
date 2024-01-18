@@ -20,3 +20,21 @@ class Solution:
 
         # Time Complexity: O(N)
         # Space Complexity: O(N)
+
+
+        # ALT Solution
+        # stack = []
+        
+        # for char in s:
+        #     if char == "(":
+        #         stack.append(")")
+        #     elif char == "{":
+        #         stack.append("}")
+        #     elif char == "[":
+        #         stack.append("]")
+        #     elif not stack or stack.pop() != char:
+        #         return False
+            
+        # if len(stack) == 0:
+        #     return True
+        # return False
