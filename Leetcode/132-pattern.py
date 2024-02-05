@@ -18,7 +18,7 @@ class Solution:
 
         # return False
 
-        # Monotonically decreasing stack approach
+        # Monotonically decreasing stack approach - O(n) solution
         n = len(nums)
         stack = []
         minn = nums[0]

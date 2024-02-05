@@ -1,6 +1,6 @@
 # Competitive-Programming
 This repo contains my solutions for various leetcode, HackerRank, Codeforces and GFG problems.
 
-Leetcode: https://leetcode.com/Eva_ns/
+Leetcode profile: https://leetcode.com/Eva_ns/
 
-Codeforces: https://codeforces.com/profile/evansachie01
+Codeforces profile: https://codeforces.com/profile/evansachie01
