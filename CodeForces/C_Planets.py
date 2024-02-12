@@ -14,6 +14,8 @@
 
 #     print(minimum_cost)
 
+# Alternative Approach
+
 from collections import defaultdict
 t = int(input())
 
