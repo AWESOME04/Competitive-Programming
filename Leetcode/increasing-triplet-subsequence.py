@@ -18,4 +18,6 @@ class Solution:
             else:
                 return True
         return False
-        
+
+        # TC: O(N)
+        # SC: O(1)
