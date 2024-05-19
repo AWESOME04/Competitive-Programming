@@ -7,6 +7,8 @@ class RecentCounter:
         while t - self.queue[0] > 3000:
             self.queue.popleft()
         return len(self.queue)
+        
+# TC and SC: O(N)
 
 # Your RecentCounter object will be instantiated and called as such:
 # obj = RecentCounter()
