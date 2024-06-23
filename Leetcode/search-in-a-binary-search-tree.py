@@ -6,13 +6,15 @@
 #         self.right = right
 class Solution:
     def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
-        def traverse(root):
-            if not root:
-                return
-            if root.val == val:
-                return root
-            if val < root.val:
-                return traverse(root.left)
-            if val > root.val:
-                return traverse(root.right)
-        return traverse(root)
+        if not root:
+            return 
+
+        if val < root.val:
+            return self.searchBST(root.left, val)
+        elif val > root.val:
+            return self.searchBST(root.right, val)
+       
+        return root
+
+# TC: O(logn)
+# SC: O(h) - where h is the height of the tree
