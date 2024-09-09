@@ -1,14 +1,18 @@
 class Solution:
-    def commonChars(self, words: List[str]) -> List[str]:
-        common_char = list(words[0])
-        for word in words[1:]:
-            current_char = list(word)
-            temp = []
+    def minHeightShelves(self, books: List[List[int]], shelfWidth: int) -> int:
+        @lru_cache
+        def dp(i):
+            if i == len(books):
+                return 0
+            rw, rh = 0, 0
+            ans = float("inf")
 
-            for char in common_char:
-                if char in current_char:
-                    temp.append(char)
-                    current_char.remove(char)
-            common_char = temp
+            for i in range(i, len(books)):
+                curr_w, curr_h = books[i]
+                rw = curr_w + rw
+                if rw <= shelfWidth:
+                    rh = max(curr_h, rh)
+                    ans = min(ans, rh + dp(i + 1))
 
-        return common_char
+            return ans
+        return dp(0)
