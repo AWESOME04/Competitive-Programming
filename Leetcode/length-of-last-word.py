@@ -1,7 +1,8 @@
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
-        words = s.strip().split()
+        s = s.rstrip()
+        return len(s.split(" ")[-1])
 
-        if not words:
-            return 0
-        return len(words[-1])
+        # TC: O(N) - Traversal
+        # SC: O(k) - Temp storage of the last word
+        
